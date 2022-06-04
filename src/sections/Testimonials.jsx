@@ -14,7 +14,7 @@ const Testimonials = () => {
         <div className="overflow-hidden w-full">
           <img
             src={testimonialImages}
-            className="h-[350px] w-[445px] object-none"
+            className="h-[350px] w-[445px] saturate-50 backdrop-contrast-75 object-none"
             alt=""
           />
         </div>
