@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import IndexPages from "./pages";
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <main>
         <IndexPages />
       </main>
+      <Footer />
     </>
   );
 };
