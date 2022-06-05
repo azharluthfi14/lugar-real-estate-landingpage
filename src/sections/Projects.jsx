@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import projectImages1 from "../assets/project1.jpg";
 import projectImages2 from "../assets/project2.jpg";
 import projectImages3 from "../assets/project3.jpg";
+import { srConfig } from "../utils/config";
+import sr from "../utils/sr";
 
 const Projects = () => {
+  const revealContainer = useRef(null);
+
+  useEffect(() => {
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
   const projects = [
     {
       id: 1,
@@ -26,7 +34,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 mx-6 lg:mx-28">
+    <section ref={revealContainer} className="py-20 mx-6 lg:mx-28">
       <div className="mb-10">
         <h1 className="text-4xl font-bold mb-3 text-black">Ongoing projects</h1>
         <p className="text-gray text-base">

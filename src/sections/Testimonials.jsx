@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import testimonialImages from "../assets/testimonial.jpg";
+import { srConfig } from "../utils/config";
+import sr from "../utils/sr";
 
 const Testimonials = () => {
+  const revealContainer = useRef(null);
+
+  useEffect(() => {
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
   return (
-    <section className="py-20 mx-6 lg:mx-28">
+    <section ref={revealContainer} className="py-20 mx-6 lg:mx-28">
       <div className="text-center mb-10">
         <h1 className="text-3xl font-bold text-black">
           Few smiles and comment

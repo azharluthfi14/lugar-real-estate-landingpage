@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import aboutImages from "../assets/about.jpg";
+import { srConfig } from "../utils/config";
+import sr from "../utils/sr";
 
 const About = () => {
+  const revealContainer = useRef(null);
+
+  useEffect(() => {
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
   return (
     <section className="mx-6 lg:mx-28 py-20">
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3">
@@ -13,7 +21,7 @@ const About = () => {
             draggable="false"
           />
         </div>
-        <div className="lg:w-1/2 mt-10 lg:mt-0 h-full">
+        <div ref={revealContainer} className="lg:w-1/2 mt-10 lg:mt-0 h-full">
           <h1 className="font-bold text-4xl mb-10 tracking-wide text-black">
             Award winning real <br /> estate company in <br /> Dubai
           </h1>

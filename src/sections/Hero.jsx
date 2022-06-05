@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import heroImages from "../assets/hero.png";
+import { srConfig } from "../utils/config";
+import sr from "../utils/sr";
 
 const Hero = () => {
+  const revealContainer = useRef(null);
+
+  useEffect(() => {
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
   return (
     <section className="h-screen relative bg-blue overflow-hidden">
       <div className="mx-6 lg:mx-28 lg:w-1/2 h-full flex items-center">
-        <div>
+        <div ref={revealContainer}>
           <h1 className="font-bold mb-6 text-5xl lg:text-7xl leading-snug text-black">
             A home is <br /> built with <br /> love and dreams
           </h1>
