@@ -26,21 +26,21 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 mx-28">
+    <section className="py-20 mx-6 lg:mx-28">
       <div className="mb-10">
         <h1 className="text-4xl font-bold mb-3 text-black">Ongoing projects</h1>
         <p className="text-gray text-base">
           Turpis facilisis tempor pulvinar in lobortis ornare magna.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-3">
         {projects.map((project) => (
           <div key={project.id} className=" relative">
             <div>
               <img
-                className="w-[350px] h-[490px]"
+                className="w-full lg:w-[350px] lg:h-[490px]"
                 src={project.images}
-                alt=""
+                alt="project-images"
               />
             </div>
             <div className="flex justify-center items-center">

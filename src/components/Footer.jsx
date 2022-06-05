@@ -3,8 +3,8 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="bg-black pt-20 pb-10">
-      <div className="mx-20">
-        <div className="flex justify-between">
+      <div className="mx-6 lg:mx-20">
+        <div className="flex flex-col lg:flex-row lg:justify-between">
           <div className="text-gray">
             <h1 className="text-xl text-white font-semibold mb-5">LUGAR</h1>
             <div className="flex items-center mb-3">
@@ -22,12 +22,12 @@ export default function Footer() {
               <span className="text-sm font-light">contact@lugar.com</span>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 space-y-10 lg:space-y-0 lg:grid-cols-3 lg:gap-16 mt-10 lg:mt-0">
             <div>
               <h1 className="uppercase mb-5 text-base text-white">
                 Quick Links
               </h1>
-              <ul className="text-sm text-gray space-y-3">
+              <ul className="text-sm text-gray space-y-5 lg:space-y-3">
                 <li>Home</li>
                 <li>About</li>
                 <li>Project</li>
@@ -38,7 +38,7 @@ export default function Footer() {
               <h1 className="uppercase mb-5 text-base text-white">
                 Legal Links
               </h1>
-              <ul className="text-sm text-gray space-y-3">
+              <ul className="text-sm text-gray space-y-5 lg:space-y-3">
                 <li>Terms</li>
                 <li>Conditions</li>
                 <li>Policy</li>
@@ -48,7 +48,7 @@ export default function Footer() {
               <h1 className="uppercase mb-5 text-base text-white">
                 Social Media
               </h1>
-              <ul className="text-sm text-gray space-y-3">
+              <ul className="text-sm text-gray space-y-5 lg:space-y-3">
                 <li>Facebook</li>
                 <li>Twitter</li>
                 <li>YouTube</li>
@@ -57,10 +57,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-28">
-          <span className="text-sm text-gray sm:text-center">
-            Copyright @ 2022 Lugar Inc.
-          </span>
+        <div className="mt-28 text-center lg:text-left">
+          <span className="text-sm text-gray">Copyright @ 2022 Lugar Inc.</span>
         </div>
       </div>
     </footer>

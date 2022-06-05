@@ -3,14 +3,14 @@ import testimonialImages from "../assets/testimonial.jpg";
 
 const Testimonials = () => {
   return (
-    <section className="py-20 mx-28">
+    <section className="py-20 mx-6 lg:mx-28">
       <div className="text-center mb-10">
         <h1 className="text-3xl font-bold text-black">
           Few smiles and comment
         </h1>
         <p>Turpis facilisis tempor pulvinar in lobortis ornare magna.</p>
       </div>
-      <div className="flex justify-between">
+      <div className="flex flex-col lg:flex-row lg:justify-between">
         <div className="overflow-hidden w-full">
           <img
             src={testimonialImages}
@@ -18,8 +18,8 @@ const Testimonials = () => {
             alt=""
           />
         </div>
-        <div className="w-full">
-          <div className="font-bold text-8xl">”</div>
+        <div className="w-full mt-10 lg:mt-0">
+          <div className="font-bold text-blue text-8xl">”</div>
           <h1 className="text-3xl text-black font-bold mb-5">
             Dream house isn’t dream anymore
           </h1>

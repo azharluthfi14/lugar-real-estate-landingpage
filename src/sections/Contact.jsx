@@ -3,18 +3,22 @@ import contactImages from "../assets/contact.jpg";
 
 const Contact = () => {
   return (
-    <section className="mx-28 py-20">
-      <div className="flex justify-between">
-        <div className="w-full">
-          <img className="w-[445px] h-[500px]" src={contactImages} alt="" />
+    <section className="mx-6 lg:mx-28 py-20">
+      <div className="flex flex-col lg:flex-row lg:justify-between">
+        <div className="w-full flex justify-center lg:block">
+          <img
+            className="h-80 w-80 lg:w-[445px] lg:h-[500px]"
+            src={contactImages}
+            alt=""
+          />
         </div>
-        <div className="w-full">
+        <div className="w-full mt-10 lg:mt-0">
           <h1 className="text-3xl mb-3 font-bold text-black">Contact us</h1>
           <p className="text-gray">
             Turpis facilisis tempor pulvinar in lobortis ornare magna.
           </p>
           <div className="mt-5">
-            <form className="space-y-5" autoComplete="off">
+            <form onSubmit="false" className="space-y-5" autoComplete="off">
               <div className="flex justify-between gap-3">
                 <input
                   className="w-full border border-black p-3 focus:rounded-none focus:outline-none"

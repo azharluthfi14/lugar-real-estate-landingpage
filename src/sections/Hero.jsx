@@ -4,9 +4,9 @@ import heroImages from "../assets/hero.png";
 const Hero = () => {
   return (
     <section className="h-screen relative bg-blue overflow-hidden">
-      <div className="mx-28 w-1/2 h-full flex items-center">
+      <div className="mx-6 lg:mx-28 lg:w-1/2 h-full flex items-center">
         <div>
-          <h1 className="font-bold mb-6 text-6xl leading-snug text-black">
+          <h1 className="font-bold mb-6 text-5xl lg:text-7xl leading-snug text-black">
             A home is <br /> built with <br /> love and dreams
           </h1>
           <p className="text-lg mb-6 tracking-wide text-black">
